@@ -14,4 +14,16 @@ public class Animal {
         this.name = name;
         this.type = type;
     }
+
+    public double getCashValue() {
+        return cashValue;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
 }
