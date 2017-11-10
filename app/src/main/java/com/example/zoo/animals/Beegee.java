@@ -6,8 +6,8 @@ package com.example.zoo.animals;
 
 public class Beegee extends Animal {
 
-    public Beegee(double cashValue, String name, String type) {
-        super(cashValue, name, type);
+    public Beegee(double cashValue, String name) {
+        super(cashValue, name);
     }
 
 }

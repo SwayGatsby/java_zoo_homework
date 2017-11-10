@@ -7,12 +7,10 @@ package com.example.zoo.animals;
 public class Animal {
     double cashValue;
     String name;
-    String type;
 
-    public Animal(double cashValue, String name, String type) {
+    public Animal(double cashValue, String name) {
         this.cashValue= cashValue;
         this.name = name;
-        this.type = type;
     }
 
     public double getCashValue() {
@@ -21,9 +19,5 @@ public class Animal {
 
     public String getName() {
         return name;
-    }
-
-    public String getType() {
-        return type;
     }
 }
