@@ -103,6 +103,7 @@ public class ZooTest {
     public void testVisitorsCanBuyATicket() {
         zoo.visitorEntersTheZoo(visitor);
         assertEquals(13.50, zoo.getBalance(), 0.10);
+        assertEquals(1, zoo.getVisitors().size());
     }
 
 

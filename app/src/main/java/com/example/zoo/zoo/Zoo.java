@@ -42,8 +42,13 @@ public class Zoo {
         return balance;
     }
 
+    public ArrayList<Visitor> getVisitors() {
+        return visitors;
+    }
+
     public double getTicketPrice() {
         return ticketPrice;
+
     }
 
     public int getTotalNumberOfAnimalsInAllEnclosures() {
