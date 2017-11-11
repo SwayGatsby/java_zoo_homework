@@ -1,6 +1,7 @@
 package com.example.zoo;
 
 import com.example.zoo.animals.Lion;
+import com.example.zoo.animals.Panda;
 import com.example.zoo.zoo.Enclosure;
 import com.example.zoo.zoo.Zoo;
 
@@ -15,15 +16,19 @@ import static org.junit.Assert.assertEquals;
 
 public class ZooTest {
 
-    Zoo zoo = new Zoo();
-    Enclosure lionEnclosure = new Enclosure<Lion>();
-    Lion lion = new Lion(55, "Jeremy");
+    Zoo zoo;
+    Enclosure lionEnclosure;
+    Enclosure pandaEnclosure;
+    Lion lion;
+    Panda panda;
 
     @Before
     public void before() {
-        Enclosure<Lion> lionEnclosure;
-        Zoo zoo = new Zoo();
-        Lion lion = new Lion(55, "Jeremy");
+        lionEnclosure = new Enclosure<Lion>();
+        pandaEnclosure = new Enclosure<Panda>();
+        zoo = new Zoo();
+        lion = new Lion(55, "Jeremy");
+        panda = new Panda(80, "Midge");
     }
 
     @Test
@@ -56,6 +61,15 @@ public class ZooTest {
         }
         lionEnclosure.removeAnimalFromEnclosure(lion);
         assertEquals(4, lionEnclosure.getEnclosure().size());
+    }
+
+    @Test
+    public void testZooCanCalculateTotalNumberOfAnimalsInAllEnclosures() {
+        zoo.addAnEnclosure(lionEnclosure);
+        zoo.addAnEnclosure(pandaEnclosure);
+        lionEnclosure.addAnimalToEnclosure(lion);
+        pandaEnclosure.addAnimalToEnclosure(panda);
+        assertEquals(2, zoo.getTotalNumberOfAnimalsInAllEnclosures());
     }
 
 

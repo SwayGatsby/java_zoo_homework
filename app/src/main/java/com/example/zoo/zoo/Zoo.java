@@ -28,4 +28,15 @@ public class Zoo {
         return enclosures;
     }
 
+    public int getTotalNumberOfAnimalsInAllEnclosures() {
+        int i;
+        int totalAnimals = 0;
+        for(i = 0 ; i < getEnclosures().size() ; i++) {
+            Enclosure enclosure = getEnclosures().get(i);
+            int animalsInThisEnclosure = enclosure.getSize();
+            totalAnimals += animalsInThisEnclosure;
+        }
+        return totalAnimals;
+    }
+
 }
