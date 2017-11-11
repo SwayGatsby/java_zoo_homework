@@ -26,9 +26,14 @@ public class ZooTest {
     public void before() {
         lionEnclosure = new Enclosure<Lion>();
         pandaEnclosure = new Enclosure<Panda>();
-        zoo = new Zoo();
+        zoo = new Zoo(0.00);
         lion = new Lion(55, "Jeremy");
         panda = new Panda(80, "Midge");
+    }
+
+    @Test
+    public void canGetZooBalance() {
+        assertEquals(0.00, zoo.getBalance(), 0.10);
     }
 
     @Test
@@ -72,5 +77,9 @@ public class ZooTest {
         assertEquals(2, zoo.getTotalNumberOfAnimalsInAllEnclosures());
     }
 
+    @Test
+    public void testTheZooCanSellAnAnimal() {
+        assertEquals(55.00, zoo.sellAnAnimal(lion), 0.10);
+    }
 
 }

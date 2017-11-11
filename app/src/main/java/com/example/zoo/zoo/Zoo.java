@@ -1,5 +1,7 @@
 package com.example.zoo.zoo;
 
+import com.example.zoo.animals.Animal;
+
 import java.util.ArrayList;
 
 /**
@@ -9,10 +11,12 @@ import java.util.ArrayList;
 public class Zoo {
 
     private ArrayList<Enclosure> enclosures;
+    private double balance;
 
-    public Zoo() {
+    public Zoo(double balance) {
 
         this.enclosures = new ArrayList<>();
+        this.balance = balance;
 
     }
 
@@ -28,6 +32,10 @@ public class Zoo {
         return enclosures;
     }
 
+    public double getBalance() {
+        return balance;
+    }
+
     public int getTotalNumberOfAnimalsInAllEnclosures() {
         int i;
         int totalAnimals = 0;
@@ -37,6 +45,11 @@ public class Zoo {
             totalAnimals += animalsInThisEnclosure;
         }
         return totalAnimals;
+    }
+
+    public double sellAnAnimal(Animal animal) {
+        balance += animal.getCashValue();
+        return balance;
     }
 
 }
