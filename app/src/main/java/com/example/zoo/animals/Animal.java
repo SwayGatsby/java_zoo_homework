@@ -5,8 +5,9 @@ package com.example.zoo.animals;
  */
 
 public class Animal {
-    double cashValue;
-    String name;
+
+    private double cashValue;
+    private String name;
 
     public Animal(double cashValue, String name) {
         this.cashValue= cashValue;

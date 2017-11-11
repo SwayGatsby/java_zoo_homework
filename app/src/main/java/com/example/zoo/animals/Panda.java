@@ -5,7 +5,9 @@ package com.example.zoo.animals;
  */
 
 public class Panda extends Animal {
+
     public Panda(double cashValue, String name) {
         super(cashValue, name);
     }
+
 }
