@@ -3,6 +3,7 @@ package com.example.zoo;
 import com.example.zoo.animals.Lion;
 import com.example.zoo.animals.Panda;
 import com.example.zoo.zoo.Enclosure;
+import com.example.zoo.zoo.Visitor;
 import com.example.zoo.zoo.Zoo;
 
 import org.junit.Before;
@@ -21,6 +22,7 @@ public class ZooTest {
     private Enclosure pandaEnclosure;
     private Lion lion;
     private Panda panda;
+    private Visitor visitor;
 
     @Before
     public void before() {
@@ -29,6 +31,7 @@ public class ZooTest {
         zoo = new Zoo(0.00, 13.50);
         lion = new Lion(55, "Jeremy");
         panda = new Panda(80, "Midge");
+        visitor = new Visitor();
     }
 
     @Test
@@ -95,6 +98,12 @@ public class ZooTest {
 //        pandaEnclosure.addAnimalToEnclosure(panda);
 //        assertEquals(135.00, zoo.getTotalValueOfAllAnimalsInZoo(), 0.10);
 //    }
+
+    @Test
+    public void testVisitorsCanBuyATicket() {
+        zoo.visitorEntersTheZoo(visitor);
+        assertEquals(13.50, zoo.getBalance(), 0.10);
+    }
 
 
 

@@ -12,15 +12,17 @@ public class Zoo {
 
     private ArrayList<Enclosure> enclosures;
     private double balance;
-    private Animal animal;
+//    private Animal animal;
     private double ticketPrice;
+    private ArrayList<Visitor> visitors;
 
     public Zoo(double balance, double ticketPrice) {
 
         this.enclosures = new ArrayList<>();
         this.balance = balance;
-        this.animal = animal;
+//        this.animal = animal;
         this.ticketPrice = ticketPrice;
+        this.visitors = new ArrayList<>();
 
     }
 
@@ -62,15 +64,26 @@ public class Zoo {
 //    public double getTotalValueOfAllAnimalsInZoo() {
 //        int totalValue = 0;
 //
-//        for(int i = 0 ; i < getEnclosures().size() ; i++) {
-//            Enclosure enclosure = getEnclosures().get(i);
-//            for ( animal : enclosure ) {
+////        for(int i = 0 ; i < getEnclosures().size() ; i++) {
+////            Enclosure enclosure = getEnclosures().get(i);
+////            for ( Animal animal : enclosure ) {
+////                totalValue += animal.getCashValue();
+////            }
+////        }
+//
+//        for( Enclosure enclosure : enclosures ) {
+//            for( Animal animal :  ) {
 //                totalValue += animal.getCashValue();
 //            }
 //        }
 //
 //        return totalValue;
 //    }
+
+    public void visitorEntersTheZoo(Visitor visitor) {
+        visitors.add(visitor);
+        balance += ticketPrice;
+    }
 
 
 }
