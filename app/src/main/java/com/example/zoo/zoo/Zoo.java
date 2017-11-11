@@ -12,11 +12,13 @@ public class Zoo {
 
     private ArrayList<Enclosure> enclosures;
     private double balance;
+    private Animal animal;
 
     public Zoo(double balance) {
 
         this.enclosures = new ArrayList<>();
         this.balance = balance;
+        this.animal = animal;
 
     }
 
@@ -37,9 +39,8 @@ public class Zoo {
     }
 
     public int getTotalNumberOfAnimalsInAllEnclosures() {
-        int i;
         int totalAnimals = 0;
-        for(i = 0 ; i < getEnclosures().size() ; i++) {
+        for(int i = 0 ; i < getEnclosures().size() ; i++) {
             Enclosure enclosure = getEnclosures().get(i);
             int animalsInThisEnclosure = enclosure.getSize();
             totalAnimals += animalsInThisEnclosure;
@@ -52,4 +53,16 @@ public class Zoo {
         return balance;
     }
 
+//    public double getTotalValueOfAllAnimalsInZoo() {
+//        int totalValue = 0;
+//
+//        for(int i = 0 ; i < getEnclosures().size() ; i++) {
+//            Enclosure enclosure = getEnclosures().get(i);
+//            for ( animal : enclosure ) {
+//                totalValue += animal.getCashValue();
+//            }
+//        }
+//
+//        return totalValue;
+//    }
 }

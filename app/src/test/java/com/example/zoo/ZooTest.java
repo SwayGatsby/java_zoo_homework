@@ -16,11 +16,11 @@ import static org.junit.Assert.assertEquals;
 
 public class ZooTest {
 
-    Zoo zoo;
-    Enclosure lionEnclosure;
-    Enclosure pandaEnclosure;
-    Lion lion;
-    Panda panda;
+    private Zoo zoo;
+    private Enclosure lionEnclosure;
+    private Enclosure pandaEnclosure;
+    private Lion lion;
+    private Panda panda;
 
     @Before
     public void before() {
@@ -81,5 +81,14 @@ public class ZooTest {
     public void testTheZooCanSellAnAnimal() {
         assertEquals(55.00, zoo.sellAnAnimal(lion), 0.10);
     }
+
+//    @Test
+//    public void testGetTotalValueOfAllAnimalsInTheZoo() {
+//        zoo.addAnEnclosure(lionEnclosure);
+//        zoo.addAnEnclosure(pandaEnclosure);
+//        lionEnclosure.addAnimalToEnclosure(lion);
+//        pandaEnclosure.addAnimalToEnclosure(panda);
+//        assertEquals(135.00, zoo.getTotalValueOfAllAnimalsInZoo(), 0.10);
+//    }
 
 }
