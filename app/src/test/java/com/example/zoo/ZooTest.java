@@ -18,16 +18,16 @@ import static org.junit.Assert.assertEquals;
 public class ZooTest {
 
     private Zoo zoo;
-    private Enclosure lionEnclosure;
-    private Enclosure pandaEnclosure;
+    private Enclosure<Lion> lionEnclosure;
+    private Enclosure<Panda> pandaEnclosure;
     private Lion lion;
     private Panda panda;
     private Visitor visitor;
 
     @Before
     public void before() {
-        lionEnclosure = new Enclosure<Lion>();
-        pandaEnclosure = new Enclosure<Panda>();
+        lionEnclosure = new Enclosure<>();
+        pandaEnclosure = new Enclosure<>();
         zoo = new Zoo(0.00, 13.50);
         lion = new Lion(55, "Jeremy");
         panda = new Panda(80, "Midge");

@@ -77,7 +77,7 @@ public class Zoo {
 ////        }
 //
 //        for( Enclosure enclosure : enclosures ) {
-//            for( Animal animal :  ) {
+//            for( Animal animal : enclosure.getEnclosure() ) {
 //                totalValue += animal.getCashValue();
 //            }
 //        }
