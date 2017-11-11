@@ -13,12 +13,14 @@ public class Zoo {
     private ArrayList<Enclosure> enclosures;
     private double balance;
     private Animal animal;
+    private double ticketPrice;
 
-    public Zoo(double balance) {
+    public Zoo(double balance, double ticketPrice) {
 
         this.enclosures = new ArrayList<>();
         this.balance = balance;
         this.animal = animal;
+        this.ticketPrice = ticketPrice;
 
     }
 
@@ -36,6 +38,10 @@ public class Zoo {
 
     public double getBalance() {
         return balance;
+    }
+
+    public double getTicketPrice() {
+        return ticketPrice;
     }
 
     public int getTotalNumberOfAnimalsInAllEnclosures() {
@@ -65,4 +71,6 @@ public class Zoo {
 //
 //        return totalValue;
 //    }
+
+
 }
